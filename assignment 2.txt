@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <!-- Bootstrap 5 CSS CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons for a professional touch -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Ensuring footer stays at the bottom of the viewport */
+        body {
+            background-color: #f4f6f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        /* Clean top accent border to give the profile card a unique look */
+        .profile-card {
+            border: none;
+            border-top: 4px solid #0d6efd;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Bootstrap Navbar with Right-Aligned Links -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-mortarboard-fill me-2"></i>CampusPortal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#studentNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- ms-auto on the <ul> pushes the nav items perfectly to the right -->
+            <div class="collapse navbar-collapse" id="studentNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Section with Responsive Grid Layout -->
+    <main class="container my-5">
+        <div class="row g-4 justify-content-center align-items-start">
+            
+            <!-- 2. Bootstrap Card (Left Column - 4 columns wide on desktop) -->
+            <section class="col-12 col-md-5 col-lg-4">
+                <div class="card profile-card text-center p-4">
+                    <div class="d-flex justify-content-center mb-3">
+                        <!-- High quality student profile placeholder avatar -->
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=250&auto=format&fit=crop" 
+                             alt="Student Photo" 
+                             class="rounded-circle profile-img">
+                    </div>
+                    <div class="card-body p-0">
+                        <!-- Your Name & Roll Number -->
+                        <h5 class="card-title fw-bold mb-1 text-dark">CHINAMANA YASWANTH KUMAR</h5>
+                        <p class="text-muted small mb-3 fw-medium">Roll No: A24126511186</p>
+                        
+                        <div class="text-start mb-4">
+                            <div class="mb-2">
+                                <small class="text-uppercase text-muted d-block" style="font-size: 0.75rem; letter-spacing: 0.5px;">Branch</small>
+                                <span class="fw-semibold text-dark">Information Technology</span>
+                            </div>
+                            <div>
+                                <small class="text-uppercase text-muted d-block" style="font-size: 0.75rem; letter-spacing: 0.5px;">Email ID</small>
+                                <span class="fw-semibold text-dark">yaswanth.c@anits.edu.in</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 3. Bootstrap Button -->
+                        <div class="d-grid">
+                            <button class="btn btn-primary" type="button">
+                                <i class="bi bi-person-bounding-box me-2"></i>View Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Academic Details Section (Right Column - 8 columns wide on desktop) -->
+            <section class="col-12 col-md-7 col-lg-8">
+                <div class="card p-4 border-0 shadow-sm bg-white">
+                    <h5 class="fw-bold mb-4 text-secondary text-md-start text-center">
+                        <i class="bi bi-journal-check me-2 text-primary"></i>Academic Details
+                    </h5>
+                    
+                    <!-- Responsive Bootstrap Table wrapper -->
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light text-secondary">
+                                <tr>
+                                    <th scope="col">Subject Name</th>
+                                    <th scope="col" class="text-center">Internal Marks</th>
+                                    <th scope="col" class="text-center">External Marks</th>
+                                    <th scope="col" class="text-center">Total Marks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-semibold">Web Technologies</td>
+                                    <td class="text-center">28</td>
+                                    <td class="text-center">64</td>
+                                    <td class="text-center fw-bold text-success">92</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-semibold">Database Management Systems</td>
+                                    <td class="text-center">26</td>
+                                    <td class="text-center">58</td>
+                                    <td class="text-center fw-bold text-success">84</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-semibold">Software Engineering</td>
+                                    <td class="text-center">29</td>
+                                    <td class="text-center">61</td>
+                                    <td class="text-center fw-bold text-success">90</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 5. Bootstrap Footer with your College Name -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-1 fw-medium">Anil Neerukonda Institute of Technology and Sciences</p>
+            <p class="mb-0 text-muted small">&copy; 2026 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
